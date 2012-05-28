@@ -51,3 +51,13 @@ module.exports.postCode = function(postCode, callback) {
     callback(null);
   });
 }
+
+module.exports.representativesLatLon = function(lat, lon, callback) {
+  request(representBaseUrl + '/representatives/?point=' + lat + ',' + lon + '/', function (error, response, body) {
+    if (!error && response.statusCode == 200) {
+      callback(JSON.parse(body));
+      return;
+    }
+    callback(null);
+  });
+}
