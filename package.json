@@ -1,11 +1,14 @@
 { "name"          : "represent"
 , "description"   : "Simple wrapper for the represent.opennorth.ca data API"
 , "homepage"      : "http://github.com/sprice/represent"
-, "repository"    : "git://github.com/sprice/represent"
-, "version"       : "0.0.1"
+, "repository"    :
+  { "type": "git"
+  , "url": "git://github.com/sprice/represent"
+  }
+, "version"       : "0.1.0"
 , "author"        : "Shawn Price <shawnp@gmail.com> (http://shawnprice.com)"
 , "keywords"      : ["represent", "api", "data"]
-, "dependencies"  : {"request": "2.9.100"}
+, "dependencies"  : {"request": ">=2.9.100"}
 , "main"          : "./represent.js"
 , "engines"       : { "node": ">=0.4.7" }
 }
