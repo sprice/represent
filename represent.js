@@ -1,63 +1,41 @@
 var request = require('request');
 
-var representBaseUrl = 'http://represent.opennorth.ca';
+const BASE_URL = 'http://represent.opennorth.ca';
 
-module.exports.get = function(url, callback) {
-  request(representBaseUrl + url , function (error, response, body) {
-    if (!error && response.statusCode == 200) {
-      callback(JSON.parse(body));
-      return;
+var Represent = {
+    get: function(url, callback){
+      request(BASE_URL + url , function (error, response, body) {
+        if (error)
+          return callback(error);
+        if (response.statusCode !== 200)
+          return callback(new Error("GET " + url + ": " + response.statusCode + " status"));
+        try {
+          callback(null, JSON.parse(body));
+        } catch (error){
+          callback(new Error("GET " + url + ": Error parsing response"));
+        }
+      });
     }
-    callback(null);
-  });
-}
 
-module.exports.boundarySet = function(boundary, callback) {
-  request(representBaseUrl + '/boundary-sets/' + boundary + '/', function (error, response, body) {
-    if (!error && response.statusCode == 200) {
-      callback(JSON.parse(body));
-      return;
+  , boundarySets: function(boundary, callback){
+      Represent.get("/boundary-sets/" + boundary, callback);
     }
-    callback(null);
-  });
-}
 
-module.exports.boundary = function(boundary, callback) {
-  request(representBaseUrl + '/boundaries/' + boundary + '/', function (error, response, body) {
-    if (!error && response.statusCode == 200) {
-      callback(JSON.parse(body));
-      return;
+  , boundaries: function(boundary, callback){
+      Represent.get("/boundaries/" + boundary, callback);
     }
-    callback(null);
-  });
-}
 
-module.exports.boundaryLatLon = function(lat, lon, callback) {
-  request(representBaseUrl + '/boundaries/?contains=' + lat + ',' + lon + '/', function (error, response, body) {
-    if (!error && response.statusCode == 200) {
-      callback(JSON.parse(body));
-      return;
+  , boundariesLatLon: function(lat, lon, callback){
+      Represent.get("/boundaries/?contains=" + lat + "," + lon, callback);
     }
-    callback(null);
-  });
-}
 
-module.exports.postCode = function(postCode, callback) {
-  request(representBaseUrl + '/postcodes/' + postCode + '/', function (error, response, body) {
-    if (!error && response.statusCode == 200) {
-      callback(JSON.parse(body));
-      return;
+  , postalCode: function(code, callback){
+      Represent.get("/postcodes/" + code, callback);
     }
-    callback(null);
-  });
-}
 
-module.exports.representativesLatLon = function(lat, lon, callback) {
-  request(representBaseUrl + '/representatives/?point=' + lat + ',' + lon + '/', function (error, response, body) {
-    if (!error && response.statusCode == 200) {
-      callback(JSON.parse(body));
-      return;
+  , representativesLatLon: function(lat, lon, callback){
+      Represent.get("/representatives/?point=" + lat + "," + lon, callback);
     }
-    callback(null);
-  });
-}
+};
+
+module.exports = Represent;
