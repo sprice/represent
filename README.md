@@ -1,5 +1,7 @@
 # Represent
 
+[![Build Status](https://secure.travis-ci.org/sprice/represent.png)](http://travis-ci.org/sprice/represent)
+
 A simple wrapper for the district and politician data from [Represent](http://represent.opennorth.ca/).
 
 ## Usage
