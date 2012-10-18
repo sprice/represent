@@ -9,7 +9,7 @@
   , "version" : "0.2.0"
   , "main" : "./represent.js"
   , "scripts" : {
-      "test" : "mocha -R spec"
+      "test" : "mocha --reporter spec --timeout 3000"
     }
   , "constributors" : [
         {
