@@ -45,7 +45,7 @@ represent.postalCode("L5G4L3", function(error, data) {});
 Example response: http://represent.opennorth.ca/representatives/?point=45.524,-73.596&format=apibrowser
 
 ```javascript
-represent.representativesLatLon("L5G4L3", function(error, data) {});
+represent.representativesLatLon(45.524, -73.596, function(error, data) {});
 ```
 
 ## Todos
