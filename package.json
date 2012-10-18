@@ -1,39 +1,34 @@
-{ 
-    "name"          : "represent"
-  , "description"   : "Simple wrapper for the represent.opennorth.ca data API"
-  , "homepage"      : "http://github.com/sprice/represent"
-  , "repository"    : {
+{
+    "name" : "represent"
+  , "description" : "Simple wrapper for the represent.opennorth.ca data API"
+  , "homepage" : "http://github.com/sprice/represent"
+  , "repository" : {
         "type": "git"
       , "url": "git://github.com/sprice/represent"
-    
     }
-  , "version"       : "0.2.0"
-  , "main"          : "./represent.js"
-
-  , "scripts"       : {
+  , "version" : "0.2.0"
+  , "main" : "./represent.js"
+  , "scripts" : {
       "test" : "mocha -R spec"
     }
-
   , "constributors" : [
         {
-            "name"  : "Shawn Price"
+            "name" : "Shawn Price"
           , "email" : "shawnp@gmail.com"
-          , "url"   : "http://shawnprice.com"
+          , "url" : "http://shawnprice.com"
         }
       , {
-            "name"  : "Jerome Gravel-Niquet"
+            "name" : "Jerome Gravel-Niquet"
           , "email" : "jeromegn@gmail.com"
-          , "url"   : "http://jgn.me"
+          , "url" : "http://jgn.me"
         }
     ]
-  
-  , "keywords"      : ["represent", "api", "data"]
-  
-  , "dependencies"  : {
+  , "keywords" : ["represent", "api", "data"]
+  , "dependencies" : {
         "request": ">=2.9.100"
     }
-  , "devDependencies": {
-        "mocha"  : "~1.6.0"
+  , "devDependencies" : {
+        "mocha" : "~1.6.0"
       , "replay" : "~1.5.3"
     }
 }

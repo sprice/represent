@@ -1,7 +1,6 @@
 var assert    = require("./helper").assert
   , Represent = require("../represent");
 
-
 describe("API", function(){
 
   describe("boundarySets", function(){
