@@ -4,14 +4,13 @@ A simple wrapper for the district and politician data from [Represent](http://re
 
 ## Usage
 
-    represent.postCode('V6A3B7', function(data) {
+    represent.postalCode('V6A3B7', function(error, data) {
       console.log(data);
     }
 
 ## Todos
 
 * add caching
-* add tests
 
 ## License
 
