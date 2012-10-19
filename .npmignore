@@ -1,2 +1,4 @@
-.git*
+.git/
 node_modules/
+test/
+.travis.yml
