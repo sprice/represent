@@ -1,5 +1,5 @@
 var assert    = require("./helper").assert
-  , Represent = require("../represent");
+  , Represent = require("../");
 
 describe("API", function(){
 

@@ -6,12 +6,12 @@
         "type": "git"
       , "url": "git://github.com/sprice/represent"
     }
-  , "version" : "0.2.0"
-  , "main" : "./represent.js"
+  , "version" : "0.2.1"
+  , "main" : "./index.js"
   , "scripts" : {
-      "test" : "mocha --reporter spec --timeout 3000"
+      "test" : "./node_modules/mocha/bin/mocha  --reporter spec --timeout 3000"
     }
-  , "constributors" : [
+  , "contributors" : [
         {
             "name" : "Shawn Price"
           , "email" : "shawnp@gmail.com"
