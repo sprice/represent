@@ -9,7 +9,7 @@
   , "version" : "0.2.1"
   , "main" : "./index.js"
   , "scripts" : {
-      "test" : "./node_modules/mocha/bin/mocha  --reporter spec --timeout 3000"
+      "test" : "mocha  --reporter spec --timeout 3000"
     }
   , "contributors" : [
         {
