@@ -1,34 +1,37 @@
 {
-    "name" : "represent"
-  , "description" : "Simple wrapper for the represent.opennorth.ca data API"
-  , "homepage" : "http://github.com/sprice/represent"
-  , "repository" : {
-        "type": "git"
-      , "url": "git://github.com/sprice/represent"
+  "name": "represent",
+  "description": "Simple wrapper for the represent.opennorth.ca data API",
+  "homepage": "http://github.com/sprice/represent",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/sprice/represent"
+  },
+  "version": "0.2.1",
+  "main": "./index.js",
+  "scripts": {
+    "test": "./node_modules/mocha/bin/mocha  --reporter spec --timeout 3000"
+  },
+  "contributors": [
+    {
+      "name": "Shawn Price",
+      "email": "shawnp@gmail.com",
+      "url": "http://shawnprice.com"
+    },
+    {
+      "name": "Jerome Gravel-Niquet",
+      "email": "jeromegn@gmail.com",
+      "url": "http://jgn.me"
     }
-  , "version" : "0.2.1"
-  , "main" : "./index.js"
-  , "scripts" : {
-      "test" : "mocha  --reporter spec --timeout 3000"
-    }
-  , "contributors" : [
-        {
-            "name" : "Shawn Price"
-          , "email" : "shawnp@gmail.com"
-          , "url" : "http://shawnprice.com"
-        }
-      , {
-            "name" : "Jerome Gravel-Niquet"
-          , "email" : "jeromegn@gmail.com"
-          , "url" : "http://jgn.me"
-        }
-    ]
-  , "keywords" : ["represent", "api", "data"]
-  , "dependencies" : {
-        "request": ">=2.9.100"
-    }
-  , "devDependencies" : {
-        "mocha" : "~1.6.0"
-      , "replay" : "~1.5.3"
-    }
+  ],
+  "keywords": [
+    "represent",
+    "api",
+    "data"
+  ],
+  "dependencies": {
+    "request": "^2.55.0"
+  },
+  "devDependencies": {
+    "mocha": "^2.2.4"
+  }
 }
