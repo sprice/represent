@@ -1,4 +1,4 @@
-var assert    = require("./helper").assert
+var assert    = require("assert")
   , Represent = require("../");
 
 describe("API", function(){
