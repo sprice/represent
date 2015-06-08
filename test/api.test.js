@@ -59,10 +59,80 @@ describe("API", function(){
     });
   });
 
+  describe("representativeSets", function(){
+    var data;
+    before(function(done){
+      Represent.representativeSets("ontario-legislature", function(error, response){
+        data = response;
+        done(error);
+      });
+    });
+
+    it("should respond with data", function(){
+      assert(data);
+    });
+  });
+
+  describe("representatives", function(){
+    var data;
+    before(function(done){
+      Represent.representatives("house-of-commons", function(error, response){
+        data = response;
+        done(error);
+      });
+    });
+
+    it("should respond with data", function(){
+      assert(data);
+    });
+  });
+
   describe("representativesLatLon", function(){
     var data;
     before(function(done){
       Represent.representativesLatLon(45.524, -73.596, function(error, response){
+        data = response;
+        done(error);
+      });
+    });
+
+    it("should respond with data", function(){
+      assert(data);
+    });
+  });
+
+  describe("elections", function(){
+    var data;
+    before(function(done){
+      Represent.elections("house-of-commons", function(error, response){
+        data = response;
+        done(error);
+      });
+    });
+
+    it("should respond with data", function(){
+      assert(data);
+    });
+  });
+
+  describe("candidates", function(){
+    var data;
+    before(function(done){
+      Represent.candidates("house-of-commons", function(error, response){
+        data = response;
+        done(error);
+      });
+    });
+
+    it("should respond with data", function(){
+      assert(data);
+    });
+  });
+
+  describe("candidatesLatLon", function(){
+    var data;
+    before(function(done){
+      Represent.candidatesLatLon(45.524, -73.596, function(error, response){
         data = response;
         done(error);
       });
